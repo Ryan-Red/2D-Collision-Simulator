@@ -4,16 +4,23 @@ import numpy as np
   
 
 class particle:
-    def __init__(self, radius, p_0,v_0):
+    def __init__(self, radius, p_0,v_0,epsilon=1):
         self.rad = radius
+
+        self.mass = radius
+        self.inverseMass = 1/self.mass
 
         self.p = p_0 #2d position vector [x, y]
 
         self.v = v_0 #2d velocity vector [v_x, v_y]
 
+        self.epsilon = epsilon
 
     def setVelocity(self, v ):
         self.v = v
+
+    def addImpulse(self, j):
+        self.v = j * self.inverseMass + self.v
 
     def updatePostion(self, dt):
         self.p = self.p + dt * self.v
