@@ -24,9 +24,9 @@ class particle:
 
         thetas = np.linspace(0,2*np.pi,num=30)
 
-        xdata = np.add(self.rad*np.cos(thetas), self.p[0])
-        ydata = np.add(self.rad*np.sin(thetas), self.p[1])
+        self.xdata = np.add(self.rad*np.cos(thetas), self.p[0])
+        self.ydata = np.add(self.rad*np.sin(thetas), self.p[1])
 
-        return xdata, ydata
+        return self.xdata, self.ydata
 
     
