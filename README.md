@@ -1,6 +1,6 @@
 # 2D Collision Simulator
 
-[Collisions' Gif](example/2D_Collision_Gif.gif)
+![Collisions' Gif](example/2D_Collision_Gif.gif)
 ## Introduction
 This project is a simple 2D collision simulator to test elastic and inelastic collision physics. 
 
